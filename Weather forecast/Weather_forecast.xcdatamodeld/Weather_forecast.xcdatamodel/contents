@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CityWeatherData" representedClassName="CityWeatherData" syncable="YES">
+        <attribute name="cityName" optional="YES" attributeType="String"/>
+        <attribute name="currentTemp" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="iconName" optional="YES" attributeType="String"/>
+        <attribute name="tempFormat" optional="YES" attributeType="String"/>
+        <attribute name="weatherdescription" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="FavoriteDestinationsData" representedClassName="FavoriteDestinationsData" syncable="YES">
+        <attribute name="cityname" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="CityWeatherData" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="FavoriteDestinationsData" positionX="-54" positionY="36" width="128" height="58"/>
+    </elements>
+</model>
