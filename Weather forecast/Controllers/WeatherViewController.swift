@@ -59,9 +59,9 @@ class WeatherViewController: UIViewController,UITextFieldDelegate {
   }
     
     func textFieldShouldReturn(_ searchLocationTextField: UITextField) -> Bool {
+        self.searchLocationTextField.endEditing(true)
         if let newLocation = self.searchLocationTextField.text{
             self.getDataBasedOnReachability(location: newLocation)
-//            self.viewModel.changeLocation(to: newLocation)
             self.searchLocationTextField.text = nil
         }
         self.view.endEditing(true)
@@ -139,24 +139,8 @@ class WeatherViewController: UIViewController,UITextFieldDelegate {
             return
         }
         self.getDataBasedOnReachability(location: newLocation)
-//        self.viewModel.changeLocation(to: newLocation)
+
         self.searchLocationTextField.text = nil
-        
-//        let alert = UIAlertController(
-//          title: "Choose location",
-//          message: nil,
-//          preferredStyle: .alert)
-//        alert.addTextField()
-//        //2
-//        let submitAction = UIAlertAction(
-//          title: "Submit",
-//          style: .default) { [unowned alert, weak self] _ in
-//            guard let newLocation = alert.textFields?.first?.text else { return }
-//            self?.viewModel.changeLocation(to: newLocation)
-//        }
-//        alert.addAction(submitAction)
-        //3
-//        present(alert, animated: true)
     }
     
     @IBAction func favoriteDestinationsAction(_ sender: UIButton) {
